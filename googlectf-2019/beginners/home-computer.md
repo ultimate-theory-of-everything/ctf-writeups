@@ -69,6 +69,7 @@ Checking the resuling file wiht `file` command:
 > file result
 result: PNG image data, 1234 x 339, 8-bit/color RGB, non-interlaced
 ```
+![result](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/my-creds)
 
 **Flag:CTF{congratsyoufoundmycreds}** 
 
