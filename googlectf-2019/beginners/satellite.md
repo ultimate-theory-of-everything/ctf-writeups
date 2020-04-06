@@ -9,8 +9,7 @@ Enter the name of the satellite to connect to or 'exit' to quit
 ```
 Typing 'osmium' (hint on the picuture in README)
 ```
-Establishing secure connection to osmium
- satellite...
+Establishing secure connection to osmium satellite...
 Welcome. Enter (a) to display config data, (b) to erase all data or (c) to disconnect
 ```
 Option (c) disconnects, as expected, option (b) gives `Unsufficient privileges` message. Trying option (a):
@@ -23,7 +22,7 @@ Resolution panchromatic: 30cm multispectral: 1.2m
 Daily acquisition capacity: 220,000km²	
 Remaining config data written to: https://docs.google.com/document/d/14eYPluD_pi3824GAFanS29tWdTcKxP_XUxx7e303-3E
 ```
-`Remaining config data` links to google doc with a base64 string:
+`Remaining config data` links to a google doc with a base64 string in it:
 ```
 VXNlcm5hbWU6IHdpcmVzaGFyay1yb2NrcwpQYXNzd29yZDogc3RhcnQtc25pZmZpbmchCg==
 ```
