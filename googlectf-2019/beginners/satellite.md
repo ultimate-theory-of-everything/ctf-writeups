@@ -1,5 +1,7 @@
 # Satellite
 
+![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/satellite-task.png)
+
 **Given**: archive with two files - init_sat binary and README.pdf
 
 Running init_sat gives output:
