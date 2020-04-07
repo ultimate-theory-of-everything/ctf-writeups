@@ -1,6 +1,9 @@
 # Space-Time Coordinates
 
+![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/space-time-coordinates-task.png)
+
 **Given:** archive with two files - log.txt and rand2.
+
 log.txt contains a set of coordinates:
 
 ```
