@@ -1,11 +1,11 @@
 # Ad
 
-![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/ad-task.png)
+![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/video-task.png)
 
 **Given:** link to youtube video https://www.youtube.com/watch?v=QzFuwljOj8Y
 
 It took a lot of time to notice, but the flag is hidden in the video at 0:17 exactly, setting playback speed to 0.25 helped a lot.
 
-![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/ad-video.png)
+![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/video-video.png)
 
 **Flag: CTF{9e796ca74932912c216a1cd00c25c84fae00e139}**
