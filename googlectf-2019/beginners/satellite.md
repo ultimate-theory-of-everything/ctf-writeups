@@ -1,15 +1,15 @@
 # Satellite
 
-![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/satellite-task.png)
+![img](./assets/satellite-task.png)
 
-**Given**: archive with two files - init_sat binary and README.pdf
+##### **Given**: archive with two files - `init_sat` binary and `README.pdf`
 
-Running init_sat gives output:
+Running `init_sat` gives output:
 ```
 Hello Operator. Ready to connect to a satellite?
 Enter the name of the satellite to connect to or 'exit' to quit
 ```
-Typing 'osmium' (hint on the picuture in README)
+Let's type 'osmium' (hint on the picture in README)
 ```
 Establishing secure connection to osmium satellite...
 Welcome. Enter (a) to display config data, (b) to erase all data or (c) to disconnect
@@ -36,11 +36,10 @@ Decoding base64 with a python snippet:
 >>> message='VXNlcm5hbWU6IHdpcmVzaGFyay1yb2NrcwpQYXNzd29yZDogc3RhcnQtc25pZmZpbmchCg=='
 >>> base.base64decode(message)
 b'Username: wireshark-rocks\nPassword: start-sniffing!\n'
-
 ``` 
 Immediately upon the connection to 'osmium' whireshark captures a DNS request to resolve `satellite.ctfcompetition.com`, in the response we see it being resolved to 34.76.101.29.
 
-Filtering out packets by the source ip = 34.76.101.29 and chosing option (a) in init_sat cli we get the first flag in the response TCP packet:
+Filtering out packets by the source ip = 34.76.101.29 and choosing option (a) in `init_sat` cli we get the flag in the response TCP packet:
 
 **Flag: CTF{4efcc72090af28fd33a2118985541f92e793477f}**
 
@@ -53,7 +52,7 @@ Let's run `file` command on the executable:
 init_sat: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, Go BuildID=YhfyV09rKV_0ewkLiNr1/6ZJO5J8awFQSRgZDzlnA/zvyuoO7Qu3ralSU_Aheb/QK0rATh0jzljJY8j2313, not stripped
 ```
 
-It's unstripped 64-bit ELF. Let's try to get strings:
+It's non-stripped 64-bit ELF. Let's try to get strings:
 
 ```
 > strings init_sat > strings.txt

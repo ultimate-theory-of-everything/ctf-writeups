@@ -1,12 +1,12 @@
 # Home Computer
 
-![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/home-computer-task.png)
+![img](./assets/home-computer-task.png)
 
-**Given:** archive with two files - family.ntfs and note.txt
+##### **Given:** archive with two files - `family.ntfs` and `note.txt`
 
-note.txt contains a tip for Mac users. I'm on Linux, so moving on.
+`note.txt` contains a tip for Mac users. I'm on Linux, so moving on.
 
-Let's check if family.ntfs is really what we think it is:
+Let's check if `family.ntfs` is really what we think it is:
 ```
 > file family.ntfs 
 family.ntfs: DOS/MBR boot sector, code offset 0x52+2, OEM-ID "NTFS    ", sectors/cluster 8, 
@@ -66,12 +66,12 @@ Let's get the value of this attribute, keeping in mind that it's an image:
 ```
 > getfattr -n user.FILE0 --only-values mnt/Users/Family/Documents/credentials.txt > result
 ```
-Checking the resuling file wiht `file` command:
+Checking the result file with `file` command:
 ```
 > file result
 result: PNG image data, 1234 x 339, 8-bit/color RGB, non-interlaced
 ```
-![result](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/my-creds)
+![result](./assets/my-creds)
 
 **Flag:CTF{congratsyoufoundmycreds}** 
 

