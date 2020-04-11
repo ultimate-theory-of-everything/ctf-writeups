@@ -2,7 +2,7 @@
 
 ![img](./assets/space-time-coordinates-task.png)
 
-##### **Given:** archive with two files - `log.txt` and `rand2`.
+#### **Given:** archive with two files - `log.txt` and `rand2`.
 
 `log.txt` contains a set of coordinates:
 

@@ -2,7 +2,7 @@
 
 ![img](./assets/home-computer-task.png)
 
-##### **Given:** archive with two files - `family.ntfs` and `note.txt`
+#### **Given:** archive with two files - `family.ntfs` and `note.txt`
 
 `note.txt` contains a tip for Mac users. I'm on Linux, so moving on.
 

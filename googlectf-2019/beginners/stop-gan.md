@@ -2,7 +2,7 @@
 
 ![img](./assets/stop-gan-task.png)
 
-##### **Given:** hostname and port - `buffer-overflow.ctfcompetition.com 1337` and archive with two files - `bof` binary and `console.c`
+#### **Given:** hostname and port - `buffer-overflow.ctfcompetition.com 1337` and archive with two files - `bof` binary and `console.c`
 
 Let's netcat the given resource:
 ```

@@ -2,7 +2,7 @@
 
 ![img](./assets/satellite-task.png)
 
-##### **Given**: archive with two files - `init_sat` binary and `README.pdf`
+#### **Given**: archive with two files - `init_sat` binary and `README.pdf`
 
 Running `init_sat` gives output:
 ```
