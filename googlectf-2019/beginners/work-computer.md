@@ -7,8 +7,7 @@
 Connecting to the remote. According to the problem description we should see a shell.
 ```
 netcat readme.ctfcompetition.com 1337
-> ls
-
+> 
 ```
 Okay, let's try to play a bit with this shell:
 ```
