@@ -207,7 +207,7 @@ CTF{Why_does_cauliflower_threaten_us}
 Cauliflower systems never crash >>
 segfault detected! ***CRASH***
 ```
-There's another SEGFAULT happening now, but only the bonus flag has been printed!
+There's another SEGFAULT happening now, but only after the bonus flag has been printed!
 
 **Flag2: CTF{controlled_crash_causes_conditional_correspondence}**
 
