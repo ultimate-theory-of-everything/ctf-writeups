@@ -33,6 +33,17 @@ Let's see what's available:
 > pwd
 /
 > ls /bin /usr/bin /sbin /usr/sbin
+/bin:
+arch
+busybox
+chgrp
+chown
+conspy
+date
+df
+dmesg
+dnsdomainname
+[...] // +100 other binaries
 ```
 There's a bunch of commands available on this system, but I cannot recognize any of them as file-reading.
 
