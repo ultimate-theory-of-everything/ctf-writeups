@@ -22,7 +22,7 @@ Inputs: run
 12345
 Cauliflower systems never crash >>
 ```
-File `console.c` is a source code of this cli, it reads user input and passes it to `bof`.
+File `console.c` is a source code of this cli. At first glance there's nothing interesting in there.
 
 Well, it's kinda obvious from the task description that there's a buffer overflow happening somewhere. Let's feed a giant input to this thing:
 ```
